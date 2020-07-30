@@ -33,7 +33,8 @@
                 </button>
             </div>
         </form>
-
+        <h3 style="text-align: center">
+            Cut audio</h3>
         <form action="/SplitAudio" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <input type="file" name="file"/>
@@ -46,7 +47,7 @@
                 </button>
             </div>
         </form>
-
+        <h3 style="text-align: center">Convert audio</h3>
         <form action="/AudioConvert" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <input type="file" name="file"/>
@@ -57,7 +58,7 @@
                     <option>mp3</option>
                     <option>wav</option>
                     <option>flac</option>
-                    <option>webm</option>
+                    <option>WMA1</option>
                     <option>mov</option>
                 </select>
             </div>
@@ -68,6 +69,8 @@
                 </button>
             </div>
         </form>
+
+        <h3 style="text-align: center">YouTube downloader</h3>
 
         <form action="/YouTubeDownloader" method="post" enctype="multipart/form-data">
             <div class="form-group">
@@ -81,6 +84,8 @@
                     <option>avi</option>
                     <option>webm</option>
                     <option>mov</option>
+
+                    <option name="mp3">mp3</option>
                 </select>
             </div>
             <br />

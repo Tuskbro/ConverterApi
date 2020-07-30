@@ -128,7 +128,7 @@ app.post('/YouTubeDownloader' ,(req,res)=> {
     let to = req.body.to
 
     let fileName = `output.${to}`
-    console.log(to)
+    console.log(to.name)
 
 
     let ref = req.body.url;
@@ -138,6 +138,7 @@ app.post('/YouTubeDownloader' ,(req,res)=> {
 var video = fs.createWriteStream('tmp/video.mp4');
      ytdl(ref, {filter: format => format.container === 'mp4'})
         .pipe(video)
+
     video.on('finish', ()=>{
         console.log('download')
         ffmpeg("tmp/video.mp4")
